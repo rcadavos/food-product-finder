@@ -1,0 +1,92 @@
+// Prisma schema for Food Product Finder.
+//
+// Prisma 7 no longer accepts the connection URL inside this file: it lives in
+// `prisma.config.ts` (for the CLI) and is handed to the driver adapter at
+// runtime (see `src/lib/prisma.ts`).
+
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  runtime      = "nodejs"
+  moduleFormat = "cjs"
+  importFileExtension = ""
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+/// Mirrors the Stripe subscription status values we care about.
+enum SubscriptionStatus {
+  INCOMPLETE
+  INCOMPLETE_EXPIRED
+  TRIALING
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  UNPAID
+  PAUSED
+}
+
+/// The application only has a single demo user (see README > Simplifications),
+/// but the schema is already multi-user so nothing has to be reshaped later.
+model User {
+  id               String   @id @default(cuid())
+  email            String   @unique @db.VarChar(191)
+  name             String?  @db.VarChar(120)
+  preferredLocale  String   @default("en") @db.VarChar(5)
+  stripeCustomerId String?  @unique @db.VarChar(191)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  searches      Search[]
+  subscriptions Subscription[]
+
+  @@map("users")
+}
+
+/// One row per executed search, used to render "recent searches".
+model Search {
+  id          String   @id @default(cuid())
+  userId      String
+  term        String   @db.VarChar(255)
+  locale      String   @default("en") @db.VarChar(5)
+  resultCount Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@map("searches")
+}
+
+/// Local projection of a Stripe subscription. Stripe stays the source of truth;
+/// this table exists so access checks never need a synchronous Stripe call.
+model Subscription {
+  id                   String             @id @default(cuid())
+  userId               String
+  stripeSubscriptionId String             @unique @db.VarChar(191)
+  stripeCustomerId     String             @db.VarChar(191)
+  stripePriceId        String?            @db.VarChar(191)
+  status               SubscriptionStatus @default(INCOMPLETE)
+  currentPeriodEnd     DateTime?
+  cancelAtPeriodEnd    Boolean            @default(false)
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status])
+  @@index([stripeCustomerId])
+  @@map("subscriptions")
+}
+
+/// Stripe delivers webhooks at least once; recording handled event ids makes
+/// the webhook endpoint idempotent.
+model ProcessedStripeEvent {
+  id          String   @id @db.VarChar(191)
+  type        String   @db.VarChar(120)
+  processedAt DateTime @default(now())
+
+  @@map("processed_stripe_events")
+}
