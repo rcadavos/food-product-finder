@@ -1,3 +1,141 @@
 {
-  "app": { "title": "Food Product Finder" }
+  "app": {
+    "title": "Food Product Finder",
+    "description": "Durchsuchen Sie verpackte Lebensmittel und ihre Nährwerte – mit Daten von Open Food Facts.",
+    "tagline": "Tausende verpackte Lebensmittel durchsuchen – in Ihrer Sprache."
+  },
+  "account": {
+    "menu": "Kontomenü",
+    "demoUser": "Demobenutzer"
+  },
+  "nav": {
+    "home": "Suche",
+    "skipToContent": "Zum Inhalt springen"
+  },
+  "language": {
+    "label": "Sprache",
+    "en": "English",
+    "nl": "Nederlands",
+    "de": "Deutsch",
+    "fr": "Français"
+  },
+  "languageIn": {
+    "en": "Englisch",
+    "nl": "Niederländisch",
+    "de": "Deutsch",
+    "fr": "Französisch"
+  },
+  "search": {
+    "label": "Produkte suchen",
+    "placeholder": "z. B. Schokolade, Quark, Olivenöl",
+    "submit": "Suchen",
+    "searching": "Suche läuft…",
+    "resultsFor": "{count, plural, =0 {Keine Produkte} one {# Produkt} other {# Produkte}} für „{term}“",
+    "noResultsTitle": "Keine Produkte gefunden",
+    "noResultsBody": "Versuchen Sie es mit einem kürzeren oder allgemeineren Suchbegriff oder suchen Sie in einer anderen Sprache.",
+    "introTitle": "Suchen Sie zunächst nach einem Produkt",
+    "introBody": "Geben Sie einen Produktnamen oder einen allgemeinen Begriff ein. Die Ergebnisse stammen direkt aus der Open-Food-Facts-Datenbank.",
+    "loadMore": "Mehr anzeigen",
+    "minLength": "Geben Sie mindestens 2 Zeichen ein.",
+    "tooLong": "Verwenden Sie höchstens 100 Zeichen."
+  },
+  "recent": {
+    "title": "Letzte Suchanfragen",
+    "empty": "Ihre Suchanfragen erscheinen hier.",
+    "clear": "Verlauf löschen",
+    "rerun": "Erneut nach {term} suchen",
+    "resultCount": "{count, plural, =0 {keine Ergebnisse} one {# Ergebnis} other {# Ergebnisse}}"
+  },
+  "product": {
+    "backToSearch": "Zurück zur Suche",
+    "brand": "Marke",
+    "brandsUnknown": "Marke unbekannt",
+    "nameUnknown": "Produkt ohne Namen",
+    "quantity": "Menge",
+    "servingSize": "Portionsgröße",
+    "barcode": "Barcode",
+    "categories": "Kategorien",
+    "labels": "Siegel",
+    "allergens": "Allergene",
+    "countries": "Verkauft in",
+    "ingredients": "Zutaten",
+    "noImage": "Kein Foto verfügbar",
+    "notAvailable": "Nicht verfügbar",
+    "incompleteData": "Open Food Facts hat zu diesem Feld keine Daten.",
+    "fallbackNotice": "Dieser Text ist nicht auf {requested} verfügbar; stattdessen wird er auf {shown} angezeigt.",
+    "fallbackUnknownLanguage": "Dieser Text ist nicht auf {requested} verfügbar; er wird in der Sprache angezeigt, die der Beitragende verwendet hat.",
+    "viewOnOpenFoodFacts": "Auf Open Food Facts ansehen",
+    "novaGroup": "NOVA-Gruppe",
+    "novaGroupValue": "Gruppe {group} von 4",
+    "ecoscore": "Eco-Score",
+    "nutriscore": "Nutri-Score",
+    "nutriscoreValue": "Nutri-Score {grade}",
+    "nutriscoreUnknown": "Nutri-Score unbekannt",
+    "notFoundTitle": "Produkt nicht gefunden",
+    "notFoundBody": "Dieser Barcode ist nicht in der Open-Food-Facts-Datenbank enthalten."
+  },
+  "nutrition": {
+    "title": "Nährwerte",
+    "per100g": "Pro 100 g",
+    "perServing": "Pro Portion",
+    "nutrient": "Nährstoff",
+    "empty": "Open Food Facts hat für dieses Produkt keine Nährwerte.",
+    "lockedTitle": "Nährwerte sind Teil des Abonnements",
+    "lockedBody": "Schließen Sie ein Abonnement ab, um Energie, Fett, Zucker, Eiweiß und Salz für jedes Produkt freizuschalten.",
+    "lockedCta": "Nährwerte freischalten",
+    "keys": {
+      "energy-kcal": "Energie",
+      "fat": "Fett",
+      "saturated-fat": "davon gesättigte Fettsäuren",
+      "carbohydrates": "Kohlenhydrate",
+      "sugars": "davon Zucker",
+      "fiber": "Ballaststoffe",
+      "proteins": "Eiweiß",
+      "salt": "Salz",
+      "sodium": "Natrium"
+    }
+  },
+  "subscription": {
+    "title": "Abonnement",
+    "priceNote": "Monatliches Abonnement, jederzeit kündbar. Stripe-Testmodus.",
+    "subscribe": "Abonnieren",
+    "subscribing": "Bezahlvorgang wird geöffnet…",
+    "manage": "Abonnement verwalten",
+    "opening": "Wird geöffnet…",
+    "statusActive": "Aktiv",
+    "statusTrialing": "Testphase",
+    "statusNone": "Kein Abonnement",
+    "statusIncomplete": "Zahlung unvollständig",
+    "statusIncompleteExpired": "Zahlung abgelaufen",
+    "statusPastDue": "Zahlung überfällig",
+    "statusCanceled": "Gekündigt",
+    "statusUnpaid": "Unbezahlt",
+    "statusPaused": "Pausiert",
+    "renewsOn": "Verlängert sich am {date}",
+    "endsOn": "Endet am {date}",
+    "successTitle": "Abonnement aktiv",
+    "successBody": "Vielen Dank! Die Nährwerte sind für den Demo-Benutzer freigeschaltet.",
+    "cancelTitle": "Bezahlvorgang abgebrochen",
+    "cancelBody": "Es wurde nichts abgebucht. Sie können das Abonnement jederzeit abschließen.",
+    "continueToSearch": "Weiter zur Suche",
+    "webhookHint": "Steht der Status noch auf inaktiv, ist der Stripe-Webhook noch nicht eingetroffen — laden Sie die Seite gleich neu."
+  },
+  "errors": {
+    "title": "Etwas ist schiefgelaufen",
+    "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "network": "Der Server ist nicht erreichbar. Läuft das Backend?",
+    "notFound": "Wir konnten nicht finden, wonach Sie gesucht haben.",
+    "upstream": "Open Food Facts antwortet gerade nicht. Bitte versuchen Sie es in Kürze erneut.",
+    "rateLimited": "Zu viele Anfragen an Open Food Facts. Bitte warten Sie einen Moment.",
+    "subscriptionRequired": "Für diese Informationen ist ein aktives Abonnement erforderlich.",
+    "subscriptionExists": "Sie haben bereits ein aktives Abonnement.",
+    "validation": "Diese Anfrage war ungültig.",
+    "retry": "Erneut versuchen"
+  },
+  "common": {
+    "loading": "Wird geladen…",
+    "labelledValue": "{label}: {value}",
+    "poweredBy": "Daten von Open Food Facts",
+    "dataLicence": "Die Produktdaten stehen unter der Open Database License (ODbL)."
+  }
 }

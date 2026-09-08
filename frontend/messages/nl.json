@@ -1,3 +1,141 @@
 {
-  "app": { "title": "Food Product Finder" }
+  "app": {
+    "title": "Food Product Finder",
+    "description": "Zoek verpakte levensmiddelen en hun voedingswaarden, mogelijk gemaakt door Open Food Facts.",
+    "tagline": "Doorzoek duizenden verpakte levensmiddelen in uw eigen taal."
+  },
+  "account": {
+    "menu": "Accountmenu",
+    "demoUser": "Demogebruiker"
+  },
+  "nav": {
+    "home": "Zoeken",
+    "skipToContent": "Naar de inhoud"
+  },
+  "language": {
+    "label": "Taal",
+    "en": "English",
+    "nl": "Nederlands",
+    "de": "Deutsch",
+    "fr": "Français"
+  },
+  "languageIn": {
+    "en": "het Engels",
+    "nl": "het Nederlands",
+    "de": "het Duits",
+    "fr": "het Frans"
+  },
+  "search": {
+    "label": "Producten zoeken",
+    "placeholder": "bijv. hagelslag, vla, olijfolie",
+    "submit": "Zoeken",
+    "searching": "Bezig met zoeken…",
+    "resultsFor": "{count, plural, =0 {Geen producten} one {# product} other {# producten}} voor “{term}”",
+    "noResultsTitle": "Geen producten gevonden",
+    "noResultsBody": "Probeer een kortere of algemenere zoekterm, of zoek in een andere taal.",
+    "introTitle": "Begin met zoeken naar een product",
+    "introBody": "Typ een productnaam of een algemene term. De resultaten komen rechtstreeks uit de database van Open Food Facts.",
+    "loadMore": "Meer tonen",
+    "minLength": "Voer minstens 2 tekens in.",
+    "tooLong": "Gebruik maximaal 100 tekens."
+  },
+  "recent": {
+    "title": "Recente zoekopdrachten",
+    "empty": "Uw zoekopdrachten verschijnen hier.",
+    "clear": "Geschiedenis wissen",
+    "rerun": "Opnieuw zoeken naar {term}",
+    "resultCount": "{count, plural, =0 {geen resultaten} one {# resultaat} other {# resultaten}}"
+  },
+  "product": {
+    "backToSearch": "Terug naar zoeken",
+    "brand": "Merk",
+    "brandsUnknown": "Merk onbekend",
+    "nameUnknown": "Naamloos product",
+    "quantity": "Hoeveelheid",
+    "servingSize": "Portiegrootte",
+    "barcode": "Streepjescode",
+    "categories": "Categorieën",
+    "labels": "Keurmerken",
+    "allergens": "Allergenen",
+    "countries": "Verkocht in",
+    "ingredients": "Ingrediënten",
+    "noImage": "Geen foto beschikbaar",
+    "notAvailable": "Niet beschikbaar",
+    "incompleteData": "Open Food Facts heeft hierover geen gegevens.",
+    "fallbackNotice": "Deze tekst is niet beschikbaar in {requested}; hij wordt getoond in {shown}.",
+    "fallbackUnknownLanguage": "Deze tekst is niet beschikbaar in {requested}; hij wordt getoond in de taal die de bijdrager heeft gebruikt.",
+    "viewOnOpenFoodFacts": "Bekijken op Open Food Facts",
+    "novaGroup": "NOVA-groep",
+    "novaGroupValue": "Groep {group} van 4",
+    "ecoscore": "Eco-Score",
+    "nutriscore": "Nutri-Score",
+    "nutriscoreValue": "Nutri-Score {grade}",
+    "nutriscoreUnknown": "Nutri-Score onbekend",
+    "notFoundTitle": "Product niet gevonden",
+    "notFoundBody": "Deze streepjescode staat niet in de database van Open Food Facts."
+  },
+  "nutrition": {
+    "title": "Voedingswaarden",
+    "per100g": "Per 100 g",
+    "perServing": "Per portie",
+    "nutrient": "Voedingsstof",
+    "empty": "Open Food Facts heeft geen voedingswaarden voor dit product.",
+    "lockedTitle": "Voedingswaarden horen bij het abonnement",
+    "lockedBody": "Neem een abonnement om van elk product de energie, vetten, suikers, eiwitten en zout te bekijken.",
+    "lockedCta": "Voedingswaarden ontgrendelen",
+    "keys": {
+      "energy-kcal": "Energie",
+      "fat": "Vet",
+      "saturated-fat": "waarvan verzadigd",
+      "carbohydrates": "Koolhydraten",
+      "sugars": "waarvan suikers",
+      "fiber": "Vezels",
+      "proteins": "Eiwitten",
+      "salt": "Zout",
+      "sodium": "Natrium"
+    }
+  },
+  "subscription": {
+    "title": "Abonnement",
+    "priceNote": "Maandelijks abonnement, altijd opzegbaar. Stripe-testmodus.",
+    "subscribe": "Abonneren",
+    "subscribing": "Betaalpagina wordt geopend…",
+    "manage": "Abonnement beheren",
+    "opening": "Bezig met openen…",
+    "statusActive": "Actief",
+    "statusTrialing": "Proefperiode",
+    "statusNone": "Geen abonnement",
+    "statusIncomplete": "Betaling niet afgerond",
+    "statusIncompleteExpired": "Betaling verlopen",
+    "statusPastDue": "Betaling achterstallig",
+    "statusCanceled": "Opgezegd",
+    "statusUnpaid": "Niet betaald",
+    "statusPaused": "Gepauzeerd",
+    "renewsOn": "Wordt verlengd op {date}",
+    "endsOn": "Loopt af op {date}",
+    "successTitle": "Abonnement actief",
+    "successBody": "Bedankt! De voedingswaarden zijn ontgrendeld voor de demogebruiker.",
+    "cancelTitle": "Betaling geannuleerd",
+    "cancelBody": "Er is niets afgeschreven. U kunt zich alsnog abonneren wanneer u wilt.",
+    "continueToSearch": "Verder naar zoeken",
+    "webhookHint": "Staat de status nog op inactief? Dan is de Stripe-webhook nog niet binnen — vernieuw de pagina zo meteen."
+  },
+  "errors": {
+    "title": "Er is iets misgegaan",
+    "generic": "Er is iets misgegaan. Probeer het opnieuw.",
+    "network": "De server is niet bereikbaar. Draait de backend?",
+    "notFound": "We konden niet vinden wat u zocht.",
+    "upstream": "Open Food Facts reageert op dit moment niet. Probeer het zo dadelijk opnieuw.",
+    "rateLimited": "Te veel aanvragen bij Open Food Facts. Wacht even.",
+    "subscriptionRequired": "Voor deze informatie is een actief abonnement nodig.",
+    "subscriptionExists": "U hebt al een actief abonnement.",
+    "validation": "Deze aanvraag was niet geldig.",
+    "retry": "Opnieuw proberen"
+  },
+  "common": {
+    "loading": "Bezig met laden…",
+    "labelledValue": "{label}: {value}",
+    "poweredBy": "Gegevens van Open Food Facts",
+    "dataLicence": "Productgegevens vallen onder de Open Database License (ODbL)."
+  }
 }

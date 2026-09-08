@@ -1,3 +1,141 @@
 {
-  "app": { "title": "Food Product Finder" }
+  "app": {
+    "title": "Food Product Finder",
+    "description": "Search packaged food products and their nutritional values, powered by Open Food Facts.",
+    "tagline": "Search thousands of packaged foods in your language."
+  },
+  "account": {
+    "menu": "Account menu",
+    "demoUser": "Demo user"
+  },
+  "nav": {
+    "home": "Search",
+    "skipToContent": "Skip to content"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "nl": "Nederlands",
+    "de": "Deutsch",
+    "fr": "Français"
+  },
+  "languageIn": {
+    "en": "English",
+    "nl": "Dutch",
+    "de": "German",
+    "fr": "French"
+  },
+  "search": {
+    "label": "Search products",
+    "placeholder": "e.g. chocolate, yoghurt, olive oil",
+    "submit": "Search",
+    "searching": "Searching…",
+    "resultsFor": "{count, plural, =0 {No products} one {# product} other {# products}} for “{term}”",
+    "noResultsTitle": "No products found",
+    "noResultsBody": "Try a shorter or more general term, or search in another language.",
+    "introTitle": "Start by searching for a product",
+    "introBody": "Type a product name or a general term. Results come straight from the Open Food Facts database.",
+    "loadMore": "Show more",
+    "minLength": "Enter at least 2 characters.",
+    "tooLong": "Please use at most 100 characters."
+  },
+  "recent": {
+    "title": "Recent searches",
+    "empty": "Your searches will show up here.",
+    "clear": "Clear history",
+    "rerun": "Search again for {term}",
+    "resultCount": "{count, plural, =0 {no results} one {# result} other {# results}}"
+  },
+  "product": {
+    "backToSearch": "Back to search",
+    "brand": "Brand",
+    "brandsUnknown": "Brand unknown",
+    "nameUnknown": "Unnamed product",
+    "quantity": "Quantity",
+    "servingSize": "Serving size",
+    "barcode": "Barcode",
+    "categories": "Categories",
+    "labels": "Labels",
+    "allergens": "Allergens",
+    "countries": "Sold in",
+    "ingredients": "Ingredients",
+    "noImage": "No photo available",
+    "notAvailable": "Not available",
+    "incompleteData": "Open Food Facts has no data for this field.",
+    "fallbackNotice": "This text is not available in {requested}; it is shown in {shown} instead.",
+    "fallbackUnknownLanguage": "This text is not available in {requested}; it is shown in the language the contributor used.",
+    "viewOnOpenFoodFacts": "View on Open Food Facts",
+    "novaGroup": "NOVA group",
+    "novaGroupValue": "Group {group} of 4",
+    "ecoscore": "Eco-Score",
+    "nutriscore": "Nutri-Score",
+    "nutriscoreValue": "Nutri-Score {grade}",
+    "nutriscoreUnknown": "Nutri-Score unknown",
+    "notFoundTitle": "Product not found",
+    "notFoundBody": "This barcode is not in the Open Food Facts database."
+  },
+  "nutrition": {
+    "title": "Nutritional values",
+    "per100g": "Per 100 g",
+    "perServing": "Per serving",
+    "nutrient": "Nutrient",
+    "empty": "Open Food Facts has no nutritional values for this product.",
+    "lockedTitle": "Nutritional values are part of the subscription",
+    "lockedBody": "Subscribe to unlock energy, fat, sugars, protein and salt for every product.",
+    "lockedCta": "Unlock nutritional values",
+    "keys": {
+      "energy-kcal": "Energy",
+      "fat": "Fat",
+      "saturated-fat": "of which saturates",
+      "carbohydrates": "Carbohydrates",
+      "sugars": "of which sugars",
+      "fiber": "Fibre",
+      "proteins": "Protein",
+      "salt": "Salt",
+      "sodium": "Sodium"
+    }
+  },
+  "subscription": {
+    "title": "Subscription",
+    "priceNote": "Monthly subscription, cancel any time. Stripe test mode.",
+    "subscribe": "Subscribe",
+    "subscribing": "Opening checkout…",
+    "manage": "Manage subscription",
+    "opening": "Opening…",
+    "statusActive": "Active",
+    "statusTrialing": "Trial",
+    "statusNone": "No subscription",
+    "statusIncomplete": "Payment incomplete",
+    "statusIncompleteExpired": "Payment expired",
+    "statusPastDue": "Payment overdue",
+    "statusCanceled": "Cancelled",
+    "statusUnpaid": "Unpaid",
+    "statusPaused": "Paused",
+    "renewsOn": "Renews on {date}",
+    "endsOn": "Ends on {date}",
+    "successTitle": "Subscription active",
+    "successBody": "Thanks! Nutritional values are unlocked for the demo user.",
+    "cancelTitle": "Checkout cancelled",
+    "cancelBody": "No payment was taken. You can subscribe whenever you like.",
+    "continueToSearch": "Continue to search",
+    "webhookHint": "If the status still says inactive, the Stripe webhook has not arrived yet — refresh in a moment."
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "generic": "Something went wrong. Please try again.",
+    "network": "Could not reach the server. Is the backend running?",
+    "notFound": "We could not find what you were looking for.",
+    "upstream": "Open Food Facts is not responding right now. Please try again shortly.",
+    "rateLimited": "Too many requests to Open Food Facts. Please wait a moment.",
+    "subscriptionRequired": "This information requires an active subscription.",
+    "subscriptionExists": "You already have an active subscription.",
+    "validation": "That request was not valid.",
+    "retry": "Try again"
+  },
+  "common": {
+    "loading": "Loading…",
+    "labelledValue": "{label}: {value}",
+    "poweredBy": "Data from Open Food Facts",
+    "dataLicence": "Product data is licensed under the Open Database License (ODbL)."
+  }
 }

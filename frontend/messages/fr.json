@@ -1,3 +1,141 @@
 {
-  "app": { "title": "Food Product Finder" }
+  "app": {
+    "title": "Food Product Finder",
+    "description": "Recherchez des produits alimentaires emballés et leurs valeurs nutritionnelles, grâce aux données d’Open Food Facts.",
+    "tagline": "Explorez des milliers de produits alimentaires emballés dans votre langue."
+  },
+  "account": {
+    "menu": "Menu du compte",
+    "demoUser": "Utilisateur de démonstration"
+  },
+  "nav": {
+    "home": "Recherche",
+    "skipToContent": "Aller au contenu"
+  },
+  "language": {
+    "label": "Langue",
+    "en": "English",
+    "nl": "Nederlands",
+    "de": "Deutsch",
+    "fr": "Français"
+  },
+  "languageIn": {
+    "en": "anglais",
+    "nl": "néerlandais",
+    "de": "allemand",
+    "fr": "français"
+  },
+  "search": {
+    "label": "Rechercher des produits",
+    "placeholder": "p. ex. camembert, yaourt, huile d’olive",
+    "submit": "Rechercher",
+    "searching": "Recherche en cours…",
+    "resultsFor": "{count, plural, =0 {Aucun produit} one {# produit} other {# produits}} pour « {term} »",
+    "noResultsTitle": "Aucun produit trouvé",
+    "noResultsBody": "Essayez un terme plus court ou plus général, ou lancez la recherche dans une autre langue.",
+    "introTitle": "Commencez par rechercher un produit",
+    "introBody": "Saisissez un nom de produit ou un terme général. Les résultats proviennent directement de la base de données Open Food Facts.",
+    "loadMore": "Afficher plus",
+    "minLength": "Saisissez au moins 2 caractères.",
+    "tooLong": "Utilisez au maximum 100 caractères."
+  },
+  "recent": {
+    "title": "Recherches récentes",
+    "empty": "Vos recherches apparaîtront ici.",
+    "clear": "Effacer l’historique",
+    "rerun": "Rechercher à nouveau {term}",
+    "resultCount": "{count, plural, =0 {aucun résultat} one {# résultat} other {# résultats}}"
+  },
+  "product": {
+    "backToSearch": "Retour à la recherche",
+    "brand": "Marque",
+    "brandsUnknown": "Marque inconnue",
+    "nameUnknown": "Produit sans nom",
+    "quantity": "Quantité",
+    "servingSize": "Taille de la portion",
+    "barcode": "Code-barres",
+    "categories": "Catégories",
+    "labels": "Labels",
+    "allergens": "Allergènes",
+    "countries": "Pays de vente",
+    "ingredients": "Ingrédients",
+    "noImage": "Aucune photo disponible",
+    "notAvailable": "Non disponible",
+    "incompleteData": "Open Food Facts ne dispose d’aucune donnée pour ce champ.",
+    "fallbackNotice": "Ce texte n’est pas disponible en {requested} ; il est affiché en {shown}.",
+    "fallbackUnknownLanguage": "Ce texte n’est pas disponible en {requested} ; il est affiché dans la langue utilisée par le contributeur.",
+    "viewOnOpenFoodFacts": "Voir sur Open Food Facts",
+    "novaGroup": "Groupe NOVA",
+    "novaGroupValue": "Groupe {group} sur 4",
+    "ecoscore": "Éco-Score",
+    "nutriscore": "Nutri-Score",
+    "nutriscoreValue": "Nutri-Score {grade}",
+    "nutriscoreUnknown": "Nutri-Score inconnu",
+    "notFoundTitle": "Produit introuvable",
+    "notFoundBody": "Ce code-barres ne figure pas dans la base de données Open Food Facts."
+  },
+  "nutrition": {
+    "title": "Valeurs nutritionnelles",
+    "per100g": "Pour 100 g",
+    "perServing": "Par portion",
+    "nutrient": "Nutriment",
+    "empty": "Open Food Facts ne dispose d’aucune valeur nutritionnelle pour ce produit.",
+    "lockedTitle": "Les valeurs nutritionnelles font partie de l’abonnement",
+    "lockedBody": "Abonnez-vous pour débloquer l’énergie, les matières grasses, les sucres, les protéines et le sel de chaque produit.",
+    "lockedCta": "Débloquer les valeurs nutritionnelles",
+    "keys": {
+      "energy-kcal": "Énergie",
+      "fat": "Matières grasses",
+      "saturated-fat": "dont acides gras saturés",
+      "carbohydrates": "Glucides",
+      "sugars": "dont sucres",
+      "fiber": "Fibres alimentaires",
+      "proteins": "Protéines",
+      "salt": "Sel",
+      "sodium": "Sodium"
+    }
+  },
+  "subscription": {
+    "title": "Abonnement",
+    "priceNote": "Abonnement mensuel, résiliable à tout moment. Mode test Stripe.",
+    "subscribe": "S’abonner",
+    "subscribing": "Ouverture de la page de paiement…",
+    "manage": "Gérer l’abonnement",
+    "opening": "Ouverture…",
+    "statusActive": "Actif",
+    "statusTrialing": "Période d’essai",
+    "statusNone": "Aucun abonnement",
+    "statusIncomplete": "Paiement incomplet",
+    "statusIncompleteExpired": "Paiement expiré",
+    "statusPastDue": "Paiement en retard",
+    "statusCanceled": "Résilié",
+    "statusUnpaid": "Impayé",
+    "statusPaused": "En pause",
+    "renewsOn": "Renouvellement le {date}",
+    "endsOn": "Se termine le {date}",
+    "successTitle": "Abonnement actif",
+    "successBody": "Merci ! Les valeurs nutritionnelles sont débloquées pour l’utilisateur de démonstration.",
+    "cancelTitle": "Paiement annulé",
+    "cancelBody": "Aucun paiement n’a été effectué. Vous pouvez vous abonner quand vous le souhaitez.",
+    "continueToSearch": "Continuer vers la recherche",
+    "webhookHint": "Si le statut indique encore inactif, le webhook Stripe n’est pas encore arrivé — actualisez la page dans un instant."
+  },
+  "errors": {
+    "title": "Une erreur est survenue",
+    "generic": "Une erreur est survenue. Veuillez réessayer.",
+    "network": "Impossible de joindre le serveur. Le backend est-il démarré ?",
+    "notFound": "Nous n’avons pas trouvé ce que vous cherchiez.",
+    "upstream": "Open Food Facts ne répond pas pour le moment. Veuillez réessayer dans quelques instants.",
+    "rateLimited": "Trop de requêtes envoyées à Open Food Facts. Veuillez patienter un instant.",
+    "subscriptionRequired": "Ces informations nécessitent un abonnement actif.",
+    "subscriptionExists": "Vous avez déjà un abonnement actif.",
+    "validation": "Cette requête n’était pas valide.",
+    "retry": "Réessayer"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "labelledValue": "{label} : {value}",
+    "poweredBy": "Données issues d’Open Food Facts",
+    "dataLicence": "Les données produits sont sous licence Open Database License (ODbL)."
+  }
 }

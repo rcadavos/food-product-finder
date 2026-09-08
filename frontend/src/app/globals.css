@@ -1,1 +1,100 @@
 @import "tailwindcss";
+
+/* Tailwind v4 is CSS-first: these custom properties *are* the design system, and every
+   `bg-brand-600` / `rounded-card` utility is generated from them. No tailwind.config.js. */
+@theme {
+  /* No next/font, so the build stays offline-safe — a system stack instead. */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif;
+
+  /* Fresh-produce green: the product is a food database. */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+
+  /* Amber carries "attention" states (past due, incomplete, data gaps). */
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+
+  --radius-card: 1rem;
+
+  /* Two elevations only. Tinted with the brand hue rather than pure black, so
+     cards sit on the green ground instead of looking cut out of it. */
+  --shadow-card: 0 1px 2px rgb(6 46 26 / 0.04), 0 6px 20px -6px rgb(6 46 26 / 0.08);
+  --shadow-lift: 0 2px 4px rgb(6 46 26 / 0.05), 0 16px 32px -12px rgb(6 46 26 / 0.16);
+}
+
+@layer base {
+  html {
+    /* Dark mode follows the OS via Tailwind's default `dark:` variant — no manual toggle. */
+    color-scheme: light dark;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    /* A flat fill reads as "unstyled"; two very soft washes give the page a light
+       source without costing an image request. */
+    background-color: var(--color-brand-50);
+    background-image:
+      radial-gradient(48rem 28rem at 15% -6rem, rgb(134 239 172 / 0.55), transparent 70%),
+      radial-gradient(38rem 24rem at 100% -2rem, rgb(245 158 11 / 0.14), transparent 70%);
+    background-repeat: no-repeat;
+    color: var(--color-neutral-900);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--color-neutral-950);
+      background-image:
+        radial-gradient(48rem 28rem at 15% -6rem, rgb(22 163 74 / 0.22), transparent 70%),
+        radial-gradient(38rem 24rem at 100% -2rem, rgb(245 158 11 / 0.08), transparent 70%);
+      color: var(--color-neutral-100);
+    }
+  }
+
+  /* Headings tighten up as they grow; the default tracking looks loose at display sizes. */
+  h1,
+  h2 {
+    letter-spacing: -0.02em;
+  }
+
+  /* One focus ring for the whole app. Components may restyle it, never remove it. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :focus-visible {
+      outline-color: var(--color-brand-400);
+    }
+  }
+}
+
+@layer components {
+  /* Off-screen until it takes focus, then pinned over the header. */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50
+      focus:rounded-lg focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-sm
+      focus:font-semibold focus:text-white;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
