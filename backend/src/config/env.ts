@@ -96,12 +96,16 @@ function loadEnv(): AppEnv {
   const result = envSchema.safeParse(collectRaw(process.env));
 
   if (!result.success) {
+    // Deliberately one line: log collectors split on newlines, so a multi-line
+    // message loses the variable names into separate entries — which is exactly
+    // when they are needed. The fix also differs by environment, so name both.
     const problems = result.error.issues
-      .map((issue) => `  - ${issue.path.join('.') || '(root)'}: ${issue.message}`)
-      .join('\n');
+      .map((issue) => `${issue.path.join('.') || '(root)'} (${issue.message})`)
+      .join(', ');
     throw new Error(
-      `Invalid backend environment configuration:\n${problems}\n` +
-        'Copy backend/.env.example to backend/.env and fill in the missing values.',
+      `Invalid backend environment configuration: ${problems}. ` +
+        'Set these in backend/.env for local development, or as service environment ' +
+        'variables when deployed.',
     );
   }
 
