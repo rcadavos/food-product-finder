@@ -5,6 +5,7 @@
     "buildCommand": "npm run build --workspace backend"
   },
   "deploy": {
+    "preDeployCommand": "npm run db:push --workspace backend",
     "startCommand": "npm run start --workspace backend",
     "healthcheckPath": "/api/health",
     "healthcheckTimeout": 30,
