@@ -66,6 +66,22 @@
     letter-spacing: -0.02em;
   }
 
+  /* Tailwind v4 dropped the old `cursor: pointer` on buttons and follows the browser
+     default instead. Every control here is click-to-act, so the affordance is restored
+     once, centrally, rather than repeated as a utility on each component — which also
+     covers the plain <button> elements inside the language and profile menus. */
+  button:not(:disabled),
+  select:not(:disabled),
+  summary,
+  [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  select:disabled {
+    cursor: not-allowed;
+  }
+
   /* One focus ring for the whole app. Components may restyle it, never remove it. */
   :focus-visible {
     outline: 2px solid var(--color-brand-600);
