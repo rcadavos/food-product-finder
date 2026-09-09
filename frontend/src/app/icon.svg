@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Food Product Finder">
+  <rect width="32" height="32" rx="7" fill="#16a34a"/>
+  <g transform="translate(4 4)" fill="none">
+    <circle cx="10" cy="10" r="6.6" stroke="#fff" stroke-width="2.2"/>
+    <path d="M14.9 15.1 20.2 20.4" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M7.6 12.4c0-2.65 2.15-4.8 4.8-4.8 0 2.65-2.15 4.8-4.8 4.8Z" fill="#fff"/>
+  </g>
+</svg>

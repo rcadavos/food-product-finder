@@ -6,19 +6,21 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
     "build": "tsc -p tsconfig.build.json",
-    "start": "node dist/index.js",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "prisma:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
     "db:reset": "prisma migrate reset --force",
     "db:seed": "tsx prisma/seed.ts",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "dev": "tsx watch src/index.ts",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
